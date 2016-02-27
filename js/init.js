@@ -104,22 +104,115 @@
 				}
 
 		// Main Sections: Two.
-		
+			$('#two').poptrox({
+				caption: function($a) { return $a.next('h3').text(); },
+				overlayColor: '#2c2c2c',
+				overlayOpacity: 0.85,
+				popupCloserText: '',
+				popupLoaderText: '',
+				selector: '.work-item a',
+				usePopupCaption: true,
+				usePopupDefaultStyling: false,
+				usePopupEasyClose: false,
+				usePopupNav: true,
+				windowMargin: (skel.isActive('small') ? 0 : 50)
+			});
 			// Lightbox gallery.
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (skel.isActive('small') ? 0 : 50)
-				});
+			
 
+			
 	});
-
+	
+	var html="<article class=\"4u 12u$(3) work-item\" id=\"{id}\">";
+		html+="<a href=\"{url}\" class=\"image fit thumb\"><img src=\"{url}\" alt=\"\" /></a>";
+		html+="<h3>{title}</h3>";
+		html+="<p>{des}.</p>";
+		html+="</article>";
+		var arr=[
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb1.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb2.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb3.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb4.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb5.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb6.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb7.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb8.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb9.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb10.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb11.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb12.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb13.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb14.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb15.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb16.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb17.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb18.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb19.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb20.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb21.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb22.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb23.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb24.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb25.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb26.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb27.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb28.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb29.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb30.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb31.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb32.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb33.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb34.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb35.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb36.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb37.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb38.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb39.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb40.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb41.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb42.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb43.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb44.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb45.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb46.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb47.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb48.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb49.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb50.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb51.jpg"},
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb52.jpg"}];
+		var start=9;
+		var length=51;
+		$(window).scroll(function() {
+			if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+				if(start<length){
+					for(var i=0;i<3;i++){
+						var temp = html.replace("{id}",start);
+						temp = temp.replace("{url}",arr[start].url);
+						temp = temp.replace("{url}",arr[start].url);
+						temp = temp.replace("{title}",arr[start].title);
+						temp = temp.replace("{des}",arr[start].des);
+						
+						$(".row").append(temp);
+						$('#'+start).poptrox({
+							caption: function($a) { return $a.next('h3').text(); },
+							overlayColor: '#2c2c2c',
+							overlayOpacity: 0.85,
+							popupCloserText: '',
+							popupLoaderText: '',
+							selector: 'a',
+							usePopupCaption: true,
+							usePopupDefaultStyling: false,
+							usePopupEasyClose: false,
+							usePopupNav: true,
+							windowMargin: (skel.isActive('small') ? 0 : 50)
+						});
+						start++;
+					}
+					
+				}
+				
+			}
+		});
 })(jQuery);

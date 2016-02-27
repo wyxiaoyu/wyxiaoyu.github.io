@@ -907,12 +907,16 @@
 
 	.work-item {
 		margin: 0 0 2em 0;
+		
 	}
 
 		.work-item .image {
 			margin: 0 0 1.5em 0;
 		}
-
+		.work-item  img{
+			width:390px;
+			height:290px;
+		}
 		.work-item h3 {
 			font-size: 1em;
 			margin: 0 0 0.5em 0;
