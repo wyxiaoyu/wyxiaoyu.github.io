@@ -155,10 +155,7 @@
 		}
 		$(window).scroll(function() {
 			if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-				if(start<length){
-					loadPic(3);
-				}
-				
+				loadPic(3);
 			}
 		});
 })(jQuery);
