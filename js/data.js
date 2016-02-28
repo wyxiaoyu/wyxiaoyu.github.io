@@ -50,5 +50,4 @@ var arr=[
 		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb48.jpg"},
 		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb49.jpg"},
 		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb50.jpg"},
-		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb51.jpg"},
-		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb52.jpg"}];
+		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb51.jpg"}];
