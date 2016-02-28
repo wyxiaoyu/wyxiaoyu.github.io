@@ -111,6 +111,13 @@
 			
 	});
 	
+	function destroyClick(){
+		$("#two").find(".work-item a").each(function(index){
+			var a = $(this);
+			a.unbind();
+		});
+		
+	}
 	var html="<article class=\"4u 12u$(3) work-item\" id=\"{id}\">";
 		html+="<a data-href=\"{url}\" class=\"image fit thumb\"><img src=\"{url}\" alt=\"\" /></a>";
 		html+="<h3>{title}</h3>";
@@ -184,6 +191,7 @@
 				$(".row").append(temp);
 				start++;
 			}
+			destroyClick();
 			$('#two').poptrox({
 				caption: function($a) { return $a.next('h3').text(); },
 				overlayColor: '#2c2c2c',
