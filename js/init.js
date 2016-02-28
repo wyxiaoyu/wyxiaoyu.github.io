@@ -129,7 +129,7 @@
 		
 		function loadPic(size){
 			
-			for(var i=0;i<size;i++){
+			for(var i=0;i<size && start<length;i++){
 				var temp = html.replace("{id}",start);
 				temp = temp.replace("{url}",arr[start].url);
 				temp = temp.replace("{url}",arr[start].url);
