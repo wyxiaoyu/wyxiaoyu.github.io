@@ -628,12 +628,12 @@
 							return;
 
 					// No href? Bail.
-						if (!a.attr('href'))
+						if (!a.attr('data-href'))
 							return;
 
 					x = {
 
-						src:			a.attr('href'),
+						src:			a.attr('data-href'),
 						captionText:	i.attr('title'),
 						width:			null,
 						height:			null,
@@ -853,7 +853,7 @@
 					i.attr('title', '');
 
 					a
-						.attr('href', '')
+						
 						.css('outline', 0)
 						.on('click', function(e) {
 

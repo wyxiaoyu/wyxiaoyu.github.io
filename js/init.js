@@ -104,27 +104,15 @@
 				}
 
 		// Main Sections: Two.
-			$('#two').poptrox({
-				caption: function($a) { return $a.next('h3').text(); },
-				overlayColor: '#2c2c2c',
-				overlayOpacity: 0.85,
-				popupCloserText: '',
-				popupLoaderText: '',
-				selector: '.work-item a',
-				usePopupCaption: true,
-				usePopupDefaultStyling: false,
-				usePopupEasyClose: false,
-				usePopupNav: true,
-				windowMargin: (skel.isActive('small') ? 0 : 50)
-			});
+			
 			// Lightbox gallery.
 			
-
+			loadPic(9);
 			
 	});
 	
 	var html="<article class=\"4u 12u$(3) work-item\" id=\"{id}\">";
-		html+="<a href=\"{url}\" class=\"image fit thumb\"><img src=\"{url}\" alt=\"\" /></a>";
+		html+="<a data-href=\"{url}\" class=\"image fit thumb\"><img src=\"{url}\" alt=\"\" /></a>";
 		html+="<h3>{title}</h3>";
 		html+="<p>{des}.</p>";
 		html+="</article>";
@@ -182,35 +170,38 @@
 		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb50.jpg"},
 		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb51.jpg"},
 		{title:"厨卫",des:"厨卫",url:"images/thumbs/psb52.jpg"}];
-		var start=9;
+		var start=0;
 		var length=51;
+		
+		function loadPic(size){
+			
+			for(var i=0;i<size;i++){
+				var temp = html.replace("{id}",start);
+				temp = temp.replace("{url}",arr[start].url);
+				temp = temp.replace("{url}",arr[start].url);
+				temp = temp.replace("{title}",arr[start].title);
+				temp = temp.replace("{des}",arr[start].des);
+				$(".row").append(temp);
+				start++;
+			}
+			$('#two').poptrox({
+				caption: function($a) { return $a.next('h3').text(); },
+				overlayColor: '#2c2c2c',
+				overlayOpacity: 0.85,
+				popupCloserText: '',
+				popupLoaderText: '',
+				selector: '.work-item a',
+				usePopupCaption: true,
+				usePopupDefaultStyling: false,
+				usePopupEasyClose: false,
+				usePopupNav: true,
+				windowMargin: (skel.isActive('small') ? 0 : 50)
+			});
+		}
 		$(window).scroll(function() {
 			if ($(window).scrollTop() == $(document).height() - $(window).height()) {
 				if(start<length){
-					for(var i=0;i<3;i++){
-						var temp = html.replace("{id}",start);
-						temp = temp.replace("{url}",arr[start].url);
-						temp = temp.replace("{url}",arr[start].url);
-						temp = temp.replace("{title}",arr[start].title);
-						temp = temp.replace("{des}",arr[start].des);
-						
-						$(".row").append(temp);
-						$('#'+start).poptrox({
-							caption: function($a) { return $a.next('h3').text(); },
-							overlayColor: '#2c2c2c',
-							overlayOpacity: 0.85,
-							popupCloserText: '',
-							popupLoaderText: '',
-							selector: 'a',
-							usePopupCaption: true,
-							usePopupDefaultStyling: false,
-							usePopupEasyClose: false,
-							usePopupNav: true,
-							windowMargin: (skel.isActive('small') ? 0 : 50)
-						});
-						start++;
-					}
-					
+					loadPic(3);
 				}
 				
 			}
